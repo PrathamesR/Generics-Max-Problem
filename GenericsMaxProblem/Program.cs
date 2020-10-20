@@ -22,16 +22,14 @@ namespace GenericsMaxProblem
 
         public static string GetMax(string a, string b, string c)
         {
-            int a_val = int.Parse(a);
-            int b_val = int.Parse(b);
-            int c_val = int.Parse(c);
-            float temp = a_val > b_val ? a_val : b_val;
-            return (temp > c_val ? temp : c_val).ToString();
+            string temp = a.CompareTo(b) > 0 ? a : b;
+            return temp.CompareTo(c) > 0 ? temp : c;
         }
 
 
         static void Main(string[] args)
         {
+            GetMax("a", "b", "c");
         }
     }
 }
