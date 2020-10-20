@@ -14,6 +14,13 @@ namespace GenericsMaxProblem
             return temp > c ? temp : c;
         }
 
+        public static float GetMax(float a, float b, float c)
+        {
+            float temp = a > b ? a : b;
+            return temp > c ? temp : c;
+        }
+
+
         static void Main(string[] args)
         {
         }
