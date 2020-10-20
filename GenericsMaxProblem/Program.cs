@@ -20,6 +20,15 @@ namespace GenericsMaxProblem
             return temp > c ? temp : c;
         }
 
+        public static string GetMax(string a, string b, string c)
+        {
+            int a_val = int.Parse(a);
+            int b_val = int.Parse(b);
+            int c_val = int.Parse(c);
+            float temp = a_val > b_val ? a_val : b_val;
+            return (temp > c_val ? temp : c_val).ToString();
+        }
+
 
         static void Main(string[] args)
         {

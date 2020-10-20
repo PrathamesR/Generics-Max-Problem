@@ -25,5 +25,13 @@ namespace TestCases
             float actual = Program.GetMax(x, y, z);
             Assert.AreEqual(actual, expected);
         }
+        
+        [TestMethod]
+        [DataRow("1", "2", "3", "3")]    //TC 2.3
+        public void TestCase3(string x, string y, string z, string expected)
+        {
+            string actual = Program.GetMax(x, y, z);
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
