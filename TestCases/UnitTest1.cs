@@ -12,7 +12,7 @@ namespace TestCases
         [DataRow(10, 10, 200, 200)]    //TC 1.3
         public void TestCase1(int x, int y, int z, int expected)
         {
-            int actual = Program.GetMax(x, y, z);
+            int actual = new GetMaxClass<int>(x,y,z).GetMax();
             Assert.AreEqual(actual, expected);
         }
 
@@ -22,15 +22,15 @@ namespace TestCases
         [DataRow(1.4f, 10.3f, 20.8f, 20.8f)]    //TC 2.3
         public void TestCase2(float x, float y, float z, float expected)
         {
-            float actual = Program.GetMax(x, y, z);
+            float actual = new GetMaxClass<float>(x, y, z).GetMax();
             Assert.AreEqual(actual, expected);
         }
         
         [TestMethod]
-        [DataRow("1", "2", "3", "3")]    //TC 2.3
+        [DataRow("1", "2", "3", "3")]    //TC 3
         public void TestCase3(string x, string y, string z, string expected)
         {
-            string actual = Program.GetMax(x, y, z);
+            string actual = new GetMaxClass<string>(x, y, z).GetMax();
             Assert.AreEqual(actual, expected);
         }
     }
