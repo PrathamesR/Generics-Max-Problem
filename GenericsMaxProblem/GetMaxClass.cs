@@ -19,13 +19,18 @@ namespace GenericsMaxProblem
         {
             return nos.Max();
         }
+
+        public void PrintMax()
+        {
+            Console.WriteLine(GetMax());
+        }
     }
 
     public class MainClass
     { 
         static void Main()
         {
-
+            new GetMaxClass<int>(new int[] { 5, 6, 7 }).PrintMax();
         }
     }
 }
